@@ -1,0 +1,153 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$link-color: #1d3557; // prussian blue
+$link-color-hover: #1d3557; // celadon blue
+$lighter-gray: #666666;
+$darker-gray: #333333;
+$background-gray: #fdfdfd;
+
+body {
+
+    color: $darker-gray;
+    background: $background-gray;
+
+    nav {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+
+        a:hover {
+            color: $link-color;
+            font-weight: bold;
+        }
+    }
+
+    h3 {
+        padding: 0;
+        margin: 15px 0px 5px 0px;
+        color:#494949;
+        // font-weight: 500;
+    }
+
+    h4 {
+        padding: 0;
+        margin: 15px 0px 5px 0px;
+        color:#494949;
+        // font-weight: 500;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+
+    a {
+        color: #1d3557;
+        font-weight: 550;
+
+        &:hover {
+            font-weight: 550;
+            color: #457b9d;
+        }
+
+        &:focus {
+            font-weight: 550;
+            color: $link-color;
+        }
+
+        // &.active {
+        // }
+    }
+
+    header nav {
+        a {
+            display: block;
+            margin-bottom: 4px;
+
+            &.sub {
+                font-size: 12px;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .software {
+
+        margin-bottom: 1.5em;
+
+        .title a {
+            font-weight: 700;
+            display: block;
+        }
+
+        .meta {
+            font-size: 12px;
+            display: block;
+        }
+
+        .desc {
+            text-align: justify;
+            margin-top: 0.2em;
+            font-size: 13px;
+            display: block;
+        }
+
+    }
+
+    .paper {
+
+        margin-bottom: 1.5em;
+
+        .title a {
+            font-weight: 700;
+            display: block;
+        }
+
+        .meta {
+            font-size: 12px;
+            display: block;
+        }
+
+        .desc {
+            text-align: justify;
+            margin-top: 0.2em;
+            font-size: 13px;
+            display: block;
+        }
+
+    }
+
+    .authors {
+
+        margin-bottom: 1em;
+
+
+        a {
+            color: $darker-gray;
+
+            &:hover {
+                color: $lighter-gray;
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 959px) {
+  footer {
+    position: relative;
+  }
+}

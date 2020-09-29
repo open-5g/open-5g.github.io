@@ -1,0 +1,26 @@
+<h2>{{list.name}}</h2>
+
+<p>{{list.preamble}}</p>
+
+{% for sdr in list.software %}
+    {% include radios.html sdr=sdr %}
+{% endfor %}
+
+{% for category in list.categories %}
+
+    <h3><a id="{{category.anchor}}"></a>{{category.name}}</h3>
+    <p>{{category.preamble}}</p>
+
+    {% for radios in category.radios %}
+        {% include radios.html radios=radios %}
+    {% endfor %}
+
+    {% for section in category.sections %}
+        <h4>{{section.name}}</h4>
+        <p>{{section.preamble}}</p>
+        {% for radios in section.radios %}
+            {% include radios.html radios=radios %}
+        {% endfor %}
+    {% endfor %}
+
+{% endfor %}

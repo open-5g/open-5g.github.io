@@ -1,0 +1,7 @@
+_site
+.sass-cache
+.jekyll-metadata
+.ruby-version
+.rbenv-gemsets
+.DS_Store
+*.swp

@@ -1,0 +1,35 @@
+
+theme: jekyll-theme-minimal
+
+title: Open, Programmable, and Virtualized 5G Networks
+description: This website is a repository that links to open source projects that contribute to the development of open, programmagle, and virtualized 5G networks.
+
+nav:
+  - text: Architectural Enablers of 5G Cellular Networks
+    key: architectures
+    url: /architectures/
+  - text: Radio Access Network
+    key: ran
+    url: /ran/
+  - text: Core Network
+    key: core
+    url: /core/
+  - text: RAN and Core Frameworks
+    key: ran-frameworks
+    url: /ran-frameworks/
+  - text: Open Virtualization and Management Frameworks
+    key: virtualization
+    url: /virtualization/
+  - text: Software Defined Radios
+    key: sdr
+    url: /sdr/
+  - text: Open Testbeds
+    key: testbeds
+    url: /testbeds/
+
+baseurl: ''
+url: https://open-5g.github.io
+markdown: kramdown
+
+sass:
+  style: compressed

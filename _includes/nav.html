@@ -1,0 +1,11 @@
+<nav>
+    {% assign url = page.url|remove:'index.html' %}
+    {% for item in site.nav %}
+        <a class="{% if url == item.url %}active{% endif %}" href="{{ item.url }}">{{ item.text }}</a>
+        {% if url == item.url %}
+            {% for category in site.data.software[item.key].categories %}
+                <a href="{{ item.url }}#{{ category.anchor}}" class="sub">{{ category.name }}</a>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</nav>

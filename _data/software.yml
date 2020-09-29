@@ -1,0 +1,491 @@
+
+ran:
+  name: Radio Access Network (RAN)
+  preamble: This page summarizes most relevant open-source solutions for RAN applications. 
+  software:
+
+    - title: Open Air Interface (OAI)
+      contributors: OAI Alliance
+      license: OAI Public License
+      status: Active
+      community: Community support available
+      url: https://www.openairinterface.org
+      desc: |
+        OAI provides software-based implementations of LTE base stations (eNBs), UEs and EPC compliant with LTE Release 8.6 (with an additional subset of features from LTE Release 10). OAI source code is written in C to guarantee real-time performance, and is distributed under the OAI Public License, a modified version of the Apache License v2.0 that allows patent-owning individuals and companies to contribute to the OAI source code while keeping their patent rights. Both the eNB and UE implementations are compatible with Intel x86 architectures running the Ubuntu Linux operating system. (An experimental version for the CentOS 7 is under development.) Several kernel- and BIOS-level modifications are required for these implementations to achieve real-time performance, including installing a low-latency kernel, and disabling power management and CPU frequency scaling functionalities.
+
+    - title: srsLTE
+      contributors: SRS
+      license: GNU AGPLv3
+      status: Active
+      community: Community support available
+      url: https://www.srslte.com/
+      desc: |
+        srsLTE provides software implementations of LTE eNB, UE, and EPC compliant with LTE Release 10 (with some features from higher versions, e.g., NR Release 15). The software suite is written in the C and C++ programming languages and it is distributed under the GNU AGPLv3 license. srsLTE is compatible with the Ubuntu and Fedora Linux distributions. It does not require any kernel- or BIOS-level modifications to achieve real-time performance though disabling CPU frequency scaling is recommended.
+
+    - title: Radisys O-RAN gNB DU 
+      contributors: Radisys
+      license: Apache v2.0 and O-RAN Software License v1.0
+      status: Active
+      community: Community support unavailable
+      url: https://gerrit.o-ran-sc.org/r/admin/repos/o-du/l2
+      desc: |
+        Radisys is a 4G/5G vendor that contributes to a number of open source software consortia, including O-RAN and several Open Networking Foundation (ONF) initiatives.As part of O-RAN, Radisys provides an open source implementation of the 3GPP NR stack for the gNB DU. To date, does not represent a complete solution that can be deployed to run real-world experiments (as with OAI and srsLTE), as it lacks integration with open source CU and RU implementations. However, this represents a key first step toward the availability of an open source 5G gNB based on the CU/DU split principle. he currently available open source code provides a complete implementation of the MAC and RLC layers. The Radisys release also provides a layer that manages the operations of the DU and interfaces it with the CU, the RU and external controllers, when available. The codebase is aligned with Release 15 of the 3GPP NR specifications. The NR MAC uses the Functional  Application  Platform  Interface  (FAPI)  to interact with a scheduler, adapted from an LTE implementation. The RLC layer supports TM, UM, AM modes.
+
+core:
+  name: Core Network
+  preamble: This is a list of open source software that can be used to run LTE and 5G Core Networks.
+
+  categories:
+    - name: Evolved Packet Core (EPC)
+      preamble: This section lists open EPC implementations.
+      anchor: epc
+      software:
+
+        - title: OAI CN
+          contributors: OAI Alliance
+          license: OAI Public License
+          status: Active
+          community: Community support available
+          url: https://www.openairinterface.org
+          desc: |
+            OAI-CN  is  written  in  the  C  and  C++  programming  languages. Dynamic  QoS  with  establishment,  modification  and  removal of  multiple  dedicated  bearers,  and  policy-based  QoS  update are also  features implemented by  the OAI-CN  MME. Traffic Flow Template (TFT) operations, such as fault detection, filter rules,  and  IP-filters  are  also  provided.  Finally,  implicit  (e.g., service request failures) and explicit (e.g., bearer resource and delete commands) congestion indicators are supported, along with multi-Access Point Name (APN), paging, and restoration procedures.
+
+        - title: srsEPC
+          contributors: SRS
+          license: GNU AGPLv3
+          status: Active
+          community: Community support available
+          url: https://www.srslte.com/
+          desc: |
+            The EPC implementation included in the srsLTE software  suite,  namely,  srsEPC,  is  written  in  C++. It is compatible with  the  Ubuntu  and  Fedora  Linux  operating  systems.  The HSS  supports  the  configuration  of  UE-related  parameters  in the  form  of  a  simple  textual  csv  file.  UE  authentication  is supported  by  XOR  and  Milenage  authentication  algorithms. srsEPC  enables  per-user  QoS  Class  Identifier  (QCI)  and  dynamic or static IP configurations.
+
+        - title: Open5GS
+          contributors: Open5GS
+          license: GNU AGPLv3
+          status: Active
+          community: Community support available
+          url: https://open5gs.org
+          desc: |
+            This  EPC  is  written  in  C  and  distributed under  the  AGPLv3  license. It  is  compatible  with  a variety of Linux distributions, such as Debian, Ubuntu, Fedora, and  CentOS,  as  well  as  FreeBSD  and  macOS.  Differently from  other  EPCs,  Open5GS  supports  the  delivery  of  voice calls  and  text  messages  through  the  LTE  network  instead of  relying  on  traditional  circuit  switching  networks.  This  is achieved by leveraging Voice over LTE (VoLTE) and SG-SMS solutions, respectively. Moreover, Open5GS includes a PCRF module, through which operators can specify network policies in  real-time,  including  prioritizing  a  certain  type  of  traffic. The implementation of 5GC functionalities is currently under development.
+
+        - title: OMEC
+          contributors: ONF, Intel, Deutsche Telekom, Sprint, AT&T
+          license: Apache v2.0
+          status: Active
+          community: Community support available
+          url: https://www.opennetworking.org/omec
+          desc: |
+            This is a high performance open source implementation  of  LTE  Release  13  EPC  developed  by  the  ONF together with telecom operators and industry partners, such as Intel, Deutsche Telekom, Sprint, and AT&T. OMEC is built using a NFV architecture to sustain scalability in large-scale  scenarios  such  as  those  of  5G  and  IoT  applications. It offers connectivity,  billing  and  charging  features.  OMEC  can  be used as a standalone EPC, or integrated in larger frameworks, such  as  Converged  Multi-Access  and  Core  (COMAC).
+
+    - name: 5G Core
+      preamble: This section lists open 5G core implementations.
+      anchor: 5gc
+      software:
+
+        - title: free5GC
+          contributors: free5GC
+          license: Apache v2.0
+          status: Active
+          community: Community support available
+          url: https://www.free5gc.org
+          desc: |
+            free5GC is  written  in  the  Go  programming  language,  and  it  is compatible with machines running the Ubuntu Linux operating system.  This  implementation,  which  was  initially  based  on NextEPC  (now  Open5GS),  supports  the  management  of  user access,  mobility,  and  sessions  (AMF  and  SMF),  and  the discovery  of  the  services  offered  by  other  network  functions (Network  Repository  Function  (NRF)).  It  also  includes  network  functions  to  select  which  network  slices  to  allocate  to UEs (Network Slice Selection Function (NSSF)), to manage, store and retrieve user data (Unified Data Management (UDM) and Unified Data Repository (UDR)), to perform UEs authentication  within  the  network  (Authentication  Server  Function (AUSF)). Functions for the operation, administration and management of the core network (Operations, Administration and Maintenance  (OAM)),  and  to  perform  network  orchestration, among others, are also included.
+
+ran-frameworks:
+  name: RAN and Core ran-frameworks
+  preamble: This page lists the main RAN, edge, and core ran-frameworks
+  categories:
+    - name: Mobile Frameworks
+      preamble: The following frameworks enrich the capabilities of the radio access or core network.
+      anchor: mobile
+
+      software: 
+        - title: O-RAN
+          contributors: O-RAN Alliance and O-RAN Software Community members
+          license: Apache v2.0, O-RAN software license v1.0
+          status: Active
+          community: Community support not available
+          url: https://www.o-ran.org
+          desc: |
+            The O-RAN Alliance is an industry consortium that promotes the definition of an open standard for the vRAN, with two goals[4]. The first is the integration of machine learning and artificial intelligence techniques in the RAN, thanks to intelligent controllers deployed at the edge[78]. The second is the definition of an agile and open architecture, enabled by well-defined interfaces between the different elements of the RAN. Since all O-RAN components must expose the same APIs, it is easy to substitute components with others offering alternative implementations of the same functionalities. This allows O-RAN-based5G deployments to integrate elements from multiple vendors, thus opening the RAN market to third-party entities providing new functionalities and diversified services. Moreover, it makes it possible to adopt COTS hardware, in an effort to promote flexibility and reduce costs. Eventually, following the trend started with cloud-native infrastructures, the O-RAN Alliance also aims at promoting open source software as part of the consortium effort.
+
+        - title: COMAC
+          contributors: ONF
+          license: Apache v2.0
+          status: Active
+          community: Community support available (mailing list)
+          url: https://www.opennetworking.org/comac/
+          desc: |
+            COMAC is a platform that targets the integration of multiple access and CN technologies, including 4G and 5G cellular networks, broadband, fiber and cable networks, and Wi-Fi deployments. The framework provides a common data plane in the core, which aggregates user data to and from different access technologies, and the possibility of managing users’ subscriptions and identities with a single management platform. COMAC is based on the SEBA platform (a lightweight multi-access technology platform, which provides high-speed links from the edge of the network to the backbone of the infrastructure), and on multiple ONF Component Projects, such as OMEC, for the mobile core and edge, and CORD for the broadband subscriber management. Moreover, it will exploit O-RAN (with the SD-RAN implementation) for the control plane of the mobile cellular access. 
+
+        - title: SD-RAN
+          contributors: ONF
+          license: N/A
+          status: Under development
+          community: N/A
+          url: https://www.opennetworking.org/sd-ran/
+          desc: |
+            SD-RAN is an open source RAN framework that follows the O-RAN development by building and trialing
+            O-RAN compliant open source components. In particular, SD-RAN is developing a cloud-native near-real-time RIC 
+            (nRT-RIC) and a set of exemplar xApps to control the RAN. This effort has a tight interplay with the other
+            ONF frameworks, including COMAC, ONOS, and Aether.
+
+        - title: Aether
+          contributors: ONF
+          license: N/A
+          status: Under development
+          community: N/A
+          url: https://www.opennetworking.org/aether/
+          desc: |
+            Aether streamlines the deployment of private enterprise cellular networks. It combines three main elements, namely, 
+            a control and orchestration interface to the RAN, an edge cloud platform (the Aether edge), with support 
+            for cloud computing APIs, and a central cloud (the Aether core), for orchestration and management. 
+            The Aether project will build and integrate several ONF efforts, including SD-RAN, ONOS, CORD and OMEC. 
+            At the time of this writing, the source code and the deployment pipeline are not publicly available. 
+            When the code will be released, besides providing an opportunity for private 5G networks, 
+            Aether could be effectively used to deploy and manage integrated RAN-edge testbeds for 5G research 
+            and innovation.
+
+        - title: Magma
+          contributors: Facebook Connectivity
+          license: BSD License
+          status: Active
+          community: Community support available (mailing list/slack)
+          url: https://connectivity.fb.com/magma/
+          desc: |
+            Magma is a framework developed by the Facebook Connectivity initiative for simplifying the 
+            deployment of cellular networks in rural markets. Notably, its goal is to avoid dependence on a 
+            specific access technology (i.e., cellular or Wi-Fi) or on a generation of 3GPP core networks. 
+            Moreover, it avoids vendor lock-in for telecom operators, while offering advanced automation and 
+            federation capabilities. The latter is particularly relevant in rural and under-developed scenarios, 
+            as it allows the pooling of resources from multiple network operators. Magma is composed by three components,
+            i.e., an access gateway, to interface RAN and core networks; a cloud-based orchestrator, for control; and
+            a federation gateway, which can be used to bind together multiple core networks.
+
+        - title: Akraino Radio Edge Cloud (REC)
+          contributors: Akraino
+          license: Apache v2.0 License
+          status: Active
+          community: Community support not available
+          url: https://www.openairinterface.org
+          desc: |
+            Akraino Radio Edge Cloud (REC) is a blueprint to support and meet the requirements of the O-RAN RIC. It is part of the Telco Appliance blueprint family. Its features include automated configuration and integration testing to facilitate the management and orchestration of the virtualized RAN. The blueprint is made up of modular building blocks and provides an abstraction of the underlying hardware infrastructure, allowing O-RAN RIC to run on top of it, and to seamlessly interface with the provided APIs.
+
+        - title: NVIDIA Aerial
+          contributors: NVIDIA
+          license: Proprietary
+          status: Active (available upon request)
+          community: N/A
+          url: https://developer.nvidia.com/aerial-sdk
+          desc: |
+            NVIDIA Aerial is a set of Software Development Kits (SDKs) that allows to build Graphics Processing 
+            Unit (GPU)-accelerated software-defined, cloud-native applications for the 5G vRAN. At the time of 
+            this writing, Aerial provides two main SDKs: cuBB and cuVNF.
+
+    - name: Slicing Frameworks
+      preamble: The following frameworks provide support for network slicing.
+      anchor: slicing
+      
+      software: 
+        - title: 5G-EmPOWER
+          contributors: FBK
+          license: Apache v2.0
+          status: Active
+          community: Community support not available
+          url: http://5g-empower.io
+          desc: |
+            5G-EmPOWER is an operating system for heterogeneous RAN architectures. It consists of an open 
+            source and reprogrammable software platform abstracting the physical RAN infrastructure and providing 
+            high-level APIs to control RAN functionalities. 
+            5G-EmPOWER currently supports several mobile Radio Access Technologies (RATs) such as LTE via srsLTE, 
+            Wi-Fi, and LoRa. The 5G NR is not supported yet. Integration of diverse RATs is obtained through 
+            agents embedding specialized wrappers, one for each RAT. While the general architecture of the 
+            agent is RAT-independent, the wrapper is RAT-specific. For instance, new RATs (e.g., 5G NR) can 
+            be integrated by implementing new wrappers.
+
+        - title: FlexRAN
+          contributors: Mosaic5G Consortium
+          license: MIT License
+          status: Active
+          community: Community support available (mailing list)
+          url: http://mosaic-5g.io/flexran/
+          desc: |
+            FlexRAN leverages abstraction and softwarization technologies to develop a RAT-independent RAN 
+            management platform. FlexRAN embraces SDN principles to decouple control and data planes. 
+            The control plane is orchestrated by a real-time centralized controller, which controls a 
+            set of agents, one for each network element. FlexRAN implements a set of REST APIs in JSON 
+            format describing the northbound interface of FlexRAN. These APIs are used by the agents to 
+            interface with base stations, thus enabling control of the protocol stack and functionalities 
+            of the base stations (i.e., MAC, RRC, PDCP).
+
+
+    - name: Edge Frameworks
+      preamble: The following frameworks enable deployment of edge computing solutions.
+      anchor: edge
+      
+      software: 
+        - title: CORD
+          contributors: ONF and partners
+          license: Apache v2.0 License
+          status: Active
+          community: Community support available (mailing list)
+          url: https://www.opennetworking.org/cord/
+          desc: |
+            The CORD framework is based on multiple software solutions that, together with reference hardware design, realize a reference MEC architecture based on SDN, NFV and cloud-native solutions. CORD aims at (i) reducing deployment costs by using commodity hardware, and (ii) enabling innovative services, thanks to well-defined APIs for accessing edge computing facilities and multi-domain security. Moreover, CORD can be easily extended to address the heterogeneous requirements of different markets. In particular, two CORD architectures specific for mobile and residential services have been spawned off into two Exemplar Platforms (SDN-Enabled Broadband Access (SEBA) and COMAC). CORD is one of the ONF projects with the largest number of contributions by the open source community. It includes detailed installation, operation and development guides, and a set of repositories with its source code.
+
+        - title: LL-MEC
+          contributors: Mosaic5G Consortium
+          license: Apache v2.0 License
+          status: Active (available upon request)
+          community: Community support available (mailing list)
+          url: http://mosaic5g.io/ll-mec/
+          desc: |
+            LL-MEC is an open source MEC framework for cellular systems compliant with 3GPP and ETSI specifications. 
+            This framework merges SDN, edge computing and abstraction principles to provide an end-to-end platform 
+            where services requested by mobile users are executed on edge nodes of the network. LL-MEC consists of 
+            two main components: The Edge Packet Service controlling core network elements (e.g., routers and gateways) 
+            via OpenFlow APIs; and the Radio Network Information Service interfacing the data plane 
+            and physical RAN elements (e.g., eNBs) via the FlexRAN protocol. Aside from MEC capabilities, 
+            LL-MEC supports network slicing for differentiated services applications with diverse latency and 
+            throughput requirements.
+
+        - title: LightEdge
+          contributors: FBK
+          license: Apache v2.0 License
+          status: Active
+          community: N/A
+          url: https://lightedge.io
+          desc: |
+            LightEdge is a MEC platform for 4G and 5G applications compliant with ETSI MEC specifications. 
+            LightEdge allows network operators to provide MEC services to mobile users through cloud-based applications. 
+            The framework provides a Service Registry summarizing services and applications registered to 
+            the MEC platform. LightEdge also includes modules and libraries for real-time information exchange 
+            across applications and services, and to perform traffic steering to and from the cellular network. 
+            LightEdge supports multiple eNBs and is compatible with several open source projects such as 
+            srsLTE, Open5GS, and srsEPC. 
+
+    
+
+
+
+virtualization:
+  name: Open Virtualization and Management Frameworks
+  preamble: This page lists the main open source frameworks for the management and orchestration of virtual (and, in case, physical) network functions.
+
+  software:
+    - title: ONAP
+      contributors: Linux Foundation and partners
+      license: Apache v2.0
+      status: Active
+      community: Community support available
+      url: https://www.onap.org
+      desc: |
+        ONAP handles the design, creation, and life cycle management of a variety of network services. Network operators can use ONAP to orchestrate the physical and virtual infrastructure deployed in their networks, in a vendor-agnostic way. In addition to common NFV orchestrator functionalities (e.g.,automated policy-driven management of the virtualization infrastructure and of the network services), ONAP provides a design framework to model network applications and services as well as a framework for data analytics to monitor the services for healing and scaling. Additionally, ONAP provides a number of reference designs, i.e., blueprints. These can be used to deploy the ONAP architecture in specific markets or for specialized use cases (i.e., 5G networks or Voice over LTE deployments). They have been tested in combination with their typical hardware configurations.
+
+    - title: Open Source NFV Management and Orchestration (OSM)
+      contributors: Multiple operators and vendors
+      license: Apache v2.0
+      status: Active
+      community: Community support available
+      url: https://osm.etsi.org
+      desc: |
+        The OSM framework is an end-to-end network service orchestrator, tailored for deployment in mobile networks. OSM is in charge of provisioning network services, i.e., combinations of physical and virtual network functions that can be chained together with a specific topology, managing their creation and life-cycle. Notably, during the initialization of a network service, a basic configuration (0-day) is applied by default. Then, the MANO framework advertises the actual configuration for the function or service (1-day). Finally, updates (2-day configurations) can be deployed at a later stage. OSM is composed by an information model, to define the network functions and services, and an automation framework, to manage their life-cycle.
+
+    - title: OpenBaton
+      contributors: Fraunhofer FOKUS and TU Berlin
+      license: Apache v2.0
+      status: Active
+      community: Community support available
+      url: https://openbaton.github.io
+      desc: |
+        OpenBaton focuses on NFV management and is fully-compliant with the ETSI NFV MANO specification. It  provides a full-fledged ecosystem to instantiate and handle atomic VNFs, as well as to compose them to create more complex network services. The framework has been designed to operate over a virtualized infrastructure. For this reason, Open Baton features drivers to directly interface with most VIMs, with specific support for OpenStack. Besides VNF orchestration, Open Baton also provides support for multi-tenancy applications through network slicing and MEC.
+
+sdr:
+  name: SDR support for Open Source Radio Units
+  preamble: This page lists the SDR platforms that can be used as radio units.
+
+  software:
+    - title: USRP B205mini-i
+      contributors: NI
+      channel: 1
+      frequency_range: [70 MHz, 6 GHz]
+      bandwidth: 56 MHz
+      ran_software: srsLTE
+      target: DAS node
+      url: https://kb.ettus.com/B200/B210/B200mini/B205mini
+      desc: |
+
+    - title: USRP B210
+      contributors: NI
+      channel: 2
+      frequency_range: [70 MHz, 6 GHz]
+      bandwidth: 56 MHz
+      ran_software: OAI, srsLTE
+      target: DAS node, small cell
+      url: https://kb.ettus.com/B200/B210/B200mini/B205mini
+      desc: |
+
+    - title: USRP N310
+      contributors: NI
+      channel: 4
+      frequency_range: [10 MHz, 6 GHz]
+      bandwidth: 100 MHz
+      ran_software: OAI
+      target: DAS node, small cell, cell tower, rooftop
+      url: https://kb.ettus.com/N300/N310
+      desc: |
+
+    - title: USRP X310
+      contributors: NI
+      channel: Up to 2
+      frequency_range: [DC, 6 GHz]
+      bandwidth: 160 MHz
+      ran_software: OAI, srsLTE
+      target: DAS node, small cell, cell tower
+      url: https://kb.ettus.com/X300/X310
+      desc: |
+
+    - title: bladeRF
+      contributors: Nuand
+      channel: 1
+      frequency_range: [300 MHz, 3.8 GHz]
+      bandwidth: 28 MHz
+      ran_software: OAI, srsLTE
+      target: DAS node, small cell
+      url: https://www.nuand.com/
+      desc: |
+
+    - title: bladeRF 2.0 micro
+      contributors: Nuand
+      channel: 2
+      frequency_range: [47 MHz, 6 GHz]
+      bandwidth: 56 MHz
+      ran_software: OAI, srsLTE
+      target: DAS node, small cell
+      url: https://www.nuand.com/
+      desc: |
+
+    - title: LimeSDR
+      contributors: Lime Microsystems
+      channel: 4 TX, 6 RX
+      frequency_range: [100 kHz, 3.8 GHz]
+      bandwidth: 61.44 MHz
+      ran_software: OAI, srsLTE
+      target: DAS node, small cell
+      url: https://limemicro.com/products/boards/limesdr/
+      desc: |
+
+    - title: Iris
+      contributors: Skylark Wireless
+      channel: 2
+      frequency_range: [50 MHz, 3.8 GHz]
+      bandwidth: 56 MHz
+      ran_software: OAI, srsLTE
+      target: DAS node, small cell
+      url: https://skylarkwireless.com/
+      desc: |
+
+
+testbeds:
+  name: Testbeds to develop and experiment with open, programmable, 5G networks
+  preamble: This page lists the testbeds platforms that can be used with the software in the other pages.
+
+  software:
+    - title: AERPAW
+      consortium: PAWR
+      technology: 5G and CR for UASs
+      5g_software: Under development
+      framework: Under development
+      scale: City-scale outdoor
+      url: https://aerpaw.org
+      desc: |
+
+    - title: Arena
+      consortium: Institute for the Wireless Internet of Things, Northeastern Univeristy
+      technology: 5G, CR, massive MIMO
+      5g_software: RAN & Core
+      framework: N/A
+      scale: Large-scale office
+      url: https://ece.northeastern.edu/wineslab/arena.php
+      desc: |
+
+    - title: Colosseum
+      consortium: Institute for the Wireless Internet of Things, Northeastern Univeristy
+      technology: 5G, CR
+      5g_software: RAN & Core
+      framework: O-RAN RIC
+      scale: Large-scale network emulator
+      url: https://www.colosseum.net
+      desc: |
+
+    - title: CORNET
+      consortium:
+      technology: 5G, CR
+      5g_software: RAN & Core
+      framework: N/A
+      scale: Large-scale indoor
+      url: https://cornet.wireless.vt.edu/
+      desc: |
+
+    - title: COSMOS
+      consortium: PAWR
+      technology: 5G, mmWave, CR, optical switching
+      5g_software: RAN & Core
+      framework: O-RAN components
+      scale: Indoor, city-scale outdoor
+      url: https://www.cosmos-lab.org/
+      desc: |
+
+    - title: Drexel Grid
+      consortium:
+      technology: 5G, CR
+      5g_software: RAN & Core
+      framework: N/A
+      scale: Large-scale indoor
+      url: https://research.coe.drexel.edu/ece/dwsl/research/drexel-grid-sdr-testbed/
+      desc: |
+
+    - title: FIT
+      consortium:
+      technology: 5G, CR, IoT, NFV
+      5g_software: RAN & Core
+      framework: OSM
+      scale: Large-scale indoor
+      url: https://fit-equipex.fr/
+      desc: |
+
+    - title: IRIS
+      consortium: FED4FIRE+
+      technology: 5G, CR, Wi-Fi, WiMAX, cloud-RAN, NFV, S-band
+      5g_software: RAN & Core
+      framework: N/A
+      scale: Indoor
+      url: http://iristestbed.eu
+      desc: |
+
+    - title: NITOS
+      consortium: FED4FIRE+
+      technology: 5G, CR, Wi-Fi, WiMAX
+      5g_software: RAN & Core
+      framework: N/A
+      scale: Large-scale indoor and outdoor, office
+      url: https://nitlab.inf.uth.gr/NITlab/nitos
+      desc: |
+
+    - title: POWDER-RENEW
+      consortium: PAWR
+      technology: 5G, CR, massive MIMO, Network Orchestration
+      5g_software: RAN & Core
+      framework: O-RAN RIC
+      scale: Indoor, city-scale outdoor
+      url: https://www.powderwireless.net
+      desc: |
+
+    - title: 5TONIC
+      consortium:
+      technology: 5G NFV, network orchestration
+      5g_software: N/A
+      framework: OSM
+      scale: Data center
+      url: https://www.5tonic.org
+      desc: |
