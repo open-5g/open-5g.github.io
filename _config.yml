@@ -26,6 +26,9 @@ nav:
   - text: Open Testbeds
     key: testbeds
     url: /testbeds/
+  - text: Books, papers, and tutorials
+    key: books
+    url: /books/
 
 baseurl: ''
 url: https://open-5g.github.io
