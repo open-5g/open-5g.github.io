@@ -1,7 +1,7 @@
 
 ran:
   name: Radio Access Network (RAN)
-  preamble: This page summarizes most relevant open-source solutions for RAN applications. 
+  preamble: This page summarizes most relevant open-source solutions for RAN applications.
   software:
 
     - title: Open Air Interface (OAI)
@@ -22,7 +22,7 @@ ran:
       desc: |
         srsLTE provides software implementations of LTE eNB, UE, and EPC compliant with LTE Release 10 (with some features from higher versions, e.g., NR Release 15). The software suite is written in the C and C++ programming languages and it is distributed under the GNU AGPLv3 license. srsLTE is compatible with the Ubuntu and Fedora Linux distributions. It does not require any kernel- or BIOS-level modifications to achieve real-time performance though disabling CPU frequency scaling is recommended.
 
-    - title: Radisys O-RAN gNB DU 
+    - title: Radisys O-RAN gNB DU
       contributors: Radisys
       license: Apache v2.0 and O-RAN Software License v1.0
       status: Active
@@ -99,7 +99,7 @@ ran-frameworks:
       preamble: The following frameworks enrich the capabilities of the radio access or core network.
       anchor: mobile
 
-      software: 
+      software:
         - title: O-RAN
           contributors: O-RAN Alliance and O-RAN Software Community members
           license: Apache v2.0, O-RAN software license v1.0
@@ -116,7 +116,7 @@ ran-frameworks:
           community: Community support available (mailing list)
           url: https://www.opennetworking.org/comac/
           desc: |
-            COMAC is a platform that targets the integration of multiple access and CN technologies, including 4G and 5G cellular networks, broadband, fiber and cable networks, and Wi-Fi deployments. The framework provides a common data plane in the core, which aggregates user data to and from different access technologies, and the possibility of managing users’ subscriptions and identities with a single management platform. COMAC is based on the SEBA platform (a lightweight multi-access technology platform, which provides high-speed links from the edge of the network to the backbone of the infrastructure), and on multiple ONF Component Projects, such as OMEC, for the mobile core and edge, and CORD for the broadband subscriber management. Moreover, it will exploit O-RAN (with the SD-RAN implementation) for the control plane of the mobile cellular access. 
+            COMAC is a platform that targets the integration of multiple access and CN technologies, including 4G and 5G cellular networks, broadband, fiber and cable networks, and Wi-Fi deployments. The framework provides a common data plane in the core, which aggregates user data to and from different access technologies, and the possibility of managing users’ subscriptions and identities with a single management platform. COMAC is based on the SEBA platform (a lightweight multi-access technology platform, which provides high-speed links from the edge of the network to the backbone of the infrastructure), and on multiple ONF Component Projects, such as OMEC, for the mobile core and edge, and CORD for the broadband subscriber management. Moreover, it will exploit O-RAN (with the SD-RAN implementation) for the control plane of the mobile cellular access.
 
         - title: SD-RAN
           contributors: ONF
@@ -126,7 +126,7 @@ ran-frameworks:
           url: https://www.opennetworking.org/sd-ran/
           desc: |
             SD-RAN is an open source RAN framework that follows the O-RAN development by building and trialing
-            O-RAN compliant open source components. In particular, SD-RAN is developing a cloud-native near-real-time RIC 
+            O-RAN compliant open source components. In particular, SD-RAN is developing a cloud-native near-real-time RIC
             (nRT-RIC) and a set of exemplar xApps to control the RAN. This effort has a tight interplay with the other
             ONF frameworks, including COMAC, ONOS, and Aether.
 
@@ -137,13 +137,13 @@ ran-frameworks:
           community: N/A
           url: https://www.opennetworking.org/aether/
           desc: |
-            Aether streamlines the deployment of private enterprise cellular networks. It combines three main elements, namely, 
-            a control and orchestration interface to the RAN, an edge cloud platform (the Aether edge), with support 
-            for cloud computing APIs, and a central cloud (the Aether core), for orchestration and management. 
-            The Aether project will build and integrate several ONF efforts, including SD-RAN, ONOS, CORD and OMEC. 
-            At the time of this writing, the source code and the deployment pipeline are not publicly available. 
-            When the code will be released, besides providing an opportunity for private 5G networks, 
-            Aether could be effectively used to deploy and manage integrated RAN-edge testbeds for 5G research 
+            Aether streamlines the deployment of private enterprise cellular networks. It combines three main elements, namely,
+            a control and orchestration interface to the RAN, an edge cloud platform (the Aether edge), with support
+            for cloud computing APIs, and a central cloud (the Aether core), for orchestration and management.
+            The Aether project will build and integrate several ONF efforts, including SD-RAN, ONOS, CORD and OMEC.
+            At the time of this writing, the source code and the deployment pipeline are not publicly available.
+            When the code will be released, besides providing an opportunity for private 5G networks,
+            Aether could be effectively used to deploy and manage integrated RAN-edge testbeds for 5G research
             and innovation.
 
         - title: Magma
@@ -153,11 +153,11 @@ ran-frameworks:
           community: Community support available (mailing list/slack)
           url: https://connectivity.fb.com/magma/
           desc: |
-            Magma is a framework developed by the Facebook Connectivity initiative for simplifying the 
-            deployment of cellular networks in rural markets. Notably, its goal is to avoid dependence on a 
-            specific access technology (i.e., cellular or Wi-Fi) or on a generation of 3GPP core networks. 
-            Moreover, it avoids vendor lock-in for telecom operators, while offering advanced automation and 
-            federation capabilities. The latter is particularly relevant in rural and under-developed scenarios, 
+            Magma is a framework developed by the Facebook Connectivity initiative for simplifying the
+            deployment of cellular networks in rural markets. Notably, its goal is to avoid dependence on a
+            specific access technology (i.e., cellular or Wi-Fi) or on a generation of 3GPP core networks.
+            Moreover, it avoids vendor lock-in for telecom operators, while offering advanced automation and
+            federation capabilities. The latter is particularly relevant in rural and under-developed scenarios,
             as it allows the pooling of resources from multiple network operators. Magma is composed by three components,
             i.e., an access gateway, to interface RAN and core networks; a cloud-based orchestrator, for control; and
             a federation gateway, which can be used to bind together multiple core networks.
@@ -178,15 +178,15 @@ ran-frameworks:
           community: N/A
           url: https://developer.nvidia.com/aerial-sdk
           desc: |
-            NVIDIA Aerial is a set of Software Development Kits (SDKs) that allows to build Graphics Processing 
-            Unit (GPU)-accelerated software-defined, cloud-native applications for the 5G vRAN. At the time of 
+            NVIDIA Aerial is a set of Software Development Kits (SDKs) that allows to build Graphics Processing
+            Unit (GPU)-accelerated software-defined, cloud-native applications for the 5G vRAN. At the time of
             this writing, Aerial provides two main SDKs: cuBB and cuVNF.
 
     - name: Slicing Frameworks
       preamble: The following frameworks provide support for network slicing.
       anchor: slicing
-      
-      software: 
+
+      software:
         - title: 5G-EmPOWER
           contributors: FBK
           license: Apache v2.0
@@ -194,13 +194,13 @@ ran-frameworks:
           community: Community support not available
           url: http://5g-empower.io
           desc: |
-            5G-EmPOWER is an operating system for heterogeneous RAN architectures. It consists of an open 
-            source and reprogrammable software platform abstracting the physical RAN infrastructure and providing 
-            high-level APIs to control RAN functionalities. 
-            5G-EmPOWER currently supports several mobile Radio Access Technologies (RATs) such as LTE via srsLTE, 
-            Wi-Fi, and LoRa. The 5G NR is not supported yet. Integration of diverse RATs is obtained through 
-            agents embedding specialized wrappers, one for each RAT. While the general architecture of the 
-            agent is RAT-independent, the wrapper is RAT-specific. For instance, new RATs (e.g., 5G NR) can 
+            5G-EmPOWER is an operating system for heterogeneous RAN architectures. It consists of an open
+            source and reprogrammable software platform abstracting the physical RAN infrastructure and providing
+            high-level APIs to control RAN functionalities.
+            5G-EmPOWER currently supports several mobile Radio Access Technologies (RATs) such as LTE via srsLTE,
+            Wi-Fi, and LoRa. The 5G NR is not supported yet. Integration of diverse RATs is obtained through
+            agents embedding specialized wrappers, one for each RAT. While the general architecture of the
+            agent is RAT-independent, the wrapper is RAT-specific. For instance, new RATs (e.g., 5G NR) can
             be integrated by implementing new wrappers.
 
         - title: FlexRAN
@@ -210,20 +210,20 @@ ran-frameworks:
           community: Community support available (mailing list)
           url: http://mosaic-5g.io/flexran/
           desc: |
-            FlexRAN leverages abstraction and softwarization technologies to develop a RAT-independent RAN 
-            management platform. FlexRAN embraces SDN principles to decouple control and data planes. 
-            The control plane is orchestrated by a real-time centralized controller, which controls a 
-            set of agents, one for each network element. FlexRAN implements a set of REST APIs in JSON 
-            format describing the northbound interface of FlexRAN. These APIs are used by the agents to 
-            interface with base stations, thus enabling control of the protocol stack and functionalities 
+            FlexRAN leverages abstraction and softwarization technologies to develop a RAT-independent RAN
+            management platform. FlexRAN embraces SDN principles to decouple control and data planes.
+            The control plane is orchestrated by a real-time centralized controller, which controls a
+            set of agents, one for each network element. FlexRAN implements a set of REST APIs in JSON
+            format describing the northbound interface of FlexRAN. These APIs are used by the agents to
+            interface with base stations, thus enabling control of the protocol stack and functionalities
             of the base stations (i.e., MAC, RRC, PDCP).
 
 
     - name: Edge Frameworks
       preamble: The following frameworks enable deployment of edge computing solutions.
       anchor: edge
-      
-      software: 
+
+      software:
         - title: CORD
           contributors: ONF and partners
           license: Apache v2.0 License
@@ -240,13 +240,13 @@ ran-frameworks:
           community: Community support available (mailing list)
           url: http://mosaic5g.io/ll-mec/
           desc: |
-            LL-MEC is an open source MEC framework for cellular systems compliant with 3GPP and ETSI specifications. 
-            This framework merges SDN, edge computing and abstraction principles to provide an end-to-end platform 
-            where services requested by mobile users are executed on edge nodes of the network. LL-MEC consists of 
-            two main components: The Edge Packet Service controlling core network elements (e.g., routers and gateways) 
-            via OpenFlow APIs; and the Radio Network Information Service interfacing the data plane 
-            and physical RAN elements (e.g., eNBs) via the FlexRAN protocol. Aside from MEC capabilities, 
-            LL-MEC supports network slicing for differentiated services applications with diverse latency and 
+            LL-MEC is an open source MEC framework for cellular systems compliant with 3GPP and ETSI specifications.
+            This framework merges SDN, edge computing and abstraction principles to provide an end-to-end platform
+            where services requested by mobile users are executed on edge nodes of the network. LL-MEC consists of
+            two main components: The Edge Packet Service controlling core network elements (e.g., routers and gateways)
+            via OpenFlow APIs; and the Radio Network Information Service interfacing the data plane
+            and physical RAN elements (e.g., eNBs) via the FlexRAN protocol. Aside from MEC capabilities,
+            LL-MEC supports network slicing for differentiated services applications with diverse latency and
             throughput requirements.
 
         - title: LightEdge
@@ -256,15 +256,15 @@ ran-frameworks:
           community: N/A
           url: https://lightedge.io
           desc: |
-            LightEdge is a MEC platform for 4G and 5G applications compliant with ETSI MEC specifications. 
-            LightEdge allows network operators to provide MEC services to mobile users through cloud-based applications. 
-            The framework provides a Service Registry summarizing services and applications registered to 
-            the MEC platform. LightEdge also includes modules and libraries for real-time information exchange 
-            across applications and services, and to perform traffic steering to and from the cellular network. 
-            LightEdge supports multiple eNBs and is compatible with several open source projects such as 
-            srsLTE, Open5GS, and srsEPC. 
+            LightEdge is a MEC platform for 4G and 5G applications compliant with ETSI MEC specifications.
+            LightEdge allows network operators to provide MEC services to mobile users through cloud-based applications.
+            The framework provides a Service Registry summarizing services and applications registered to
+            the MEC platform. LightEdge also includes modules and libraries for real-time information exchange
+            across applications and services, and to perform traffic steering to and from the cellular network.
+            LightEdge supports multiple eNBs and is compatible with several open source projects such as
+            srsLTE, Open5GS, and srsEPC.
 
-    
+
 
 
 
