@@ -31,14 +31,6 @@ ran:
       desc: |
         Radisys is a 4G/5G vendor that contributes to a number of open source software consortia, including O-RAN and several Open Networking Foundation (ONF) initiatives.As part of O-RAN, Radisys provides an open source implementation of the 3GPP NR stack for the gNB DU. To date, does not represent a complete solution that can be deployed to run real-world experiments (as with OAI and srsLTE), as it lacks integration with open source CU and RU implementations. However, this represents a key first step toward the availability of an open source 5G gNB based on the CU/DU split principle. he currently available open source code provides a complete implementation of the MAC and RLC layers. The Radisys release also provides a layer that manages the operations of the DU and interfaces it with the CU, the RU and external controllers, when available. The codebase is aligned with Release 15 of the 3GPP NR specifications. The NR MAC uses the Functional  Application  Platform  Interface  (FAPI)  to interact with a scheduler, adapted from an LTE implementation. The RLC layer supports TM, UM, AM modes.
 
-    - title: Rapid.Space ORS
-      contributors: Rapid.Space, Libre Endowment Fund
-      license: AGPL
-      status: Active
-      community: Commercial support unavailable
-      url: https://www.fdl-lef.org/FDL-Presentation.ORS.Licensing?portal_skin=Slide#/
-      desc: |
-        Rapid.space' ORS can be configured as an autonomous base station combining RRU, BBU and core network into a single, compact enclosure. This setup is ideal for private converged networks, defence or rescue missions. Models are available on differant radio frequency bands. It is designed to be orchestrated with SlapOS.
 core:
   name: Core Network
   preamble: This is a list of open source software that can be used to run LTE and 5G Core Networks.
