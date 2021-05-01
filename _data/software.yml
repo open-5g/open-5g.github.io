@@ -385,6 +385,14 @@ sdr:
       url: https://skylarkwireless.com/
       desc: |
 
+    - title: Rapid.Space ORS
+      contributors: Rapid.Space, Libre Endowment Fund
+      license: AGPL
+      status: Active
+      community: Commercial support unavailable
+      url: https://www.fdl-lef.org/FDL-Presentation.ORS.Licensing?portal_skin=Slide#/
+      desc: |
+        Rapid.space' ORS can be configured as an autonomous base station combining RRU, BBU and core network into a single, compact enclosure. This setup is ideal for private converged networks, defence or rescue missions. Models are available on differant radio frequency bands. It is designed to be orchestrated with SlapOS.
 
 testbeds:
   name: Testbeds to develop and experiment with open, programmable, 5G networks
