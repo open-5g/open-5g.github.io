@@ -299,6 +299,15 @@ virtualization:
       url: https://openbaton.github.io
       desc: |
         OpenBaton focuses on NFV management and is fully-compliant with the ETSI NFV MANO specification. It  provides a full-fledged ecosystem to instantiate and handle atomic VNFs, as well as to compose them to create more complex network services. The framework has been designed to operate over a virtualized infrastructure. For this reason, Open Baton features drivers to directly interface with most VIMs, with specific support for OpenStack. Besides VNF orchestration, Open Baton also provides support for multi-tenancy applications through network slicing and MEC.
+    
+    - title: SlapOS
+      contributors: Nexedi, Rapid.Space
+      license: GPLv3
+      status: Active
+      community: Commercial support available
+      url: https://slapos.nexedi.com/
+      desc: |
+        SlapOS is a general purpose overlay operating system for distributed POSIX infrastructures (Linux, xBSD, etc.) with a strong focus on service management. It is a published as Free Software under fairly permissive licensing. It can be used for many workload types but is one of the fittest for vRAN orchestration.
 
 sdr:
   name: SDR support for Open Source Radio Units
