@@ -506,3 +506,19 @@ testbeds:
       scale: Data center
       url: https://www.5tonic.org
       desc: |
+
+
+books:
+  name: Books, papers, and tutorials
+  preamble: This page provides a list of books, papers and other informational resources about Open RAN
+  software:
+
+    - title: 5G Radio Access Network Architecture: The Dark Side of 5G
+      editor: Sasha Sirotkin
+      publisher: Wiley - IEEE
+      status: Pre-order
+      url: https://www.darksideof5g.com
+      desc: |
+        Written by industry insiders with state of the art research at their fingertips, this book describes the Radio Access Network (RAN) architecture, starting with currently deployed 4G, followed by the description of 5G requirements and why re-thinking of the RAN architecture is needed to support these. Based on these considerations, it explains the 5G RAN (also referred as NG-RAN) network architecture, defined in 3GPP, O-RAN and Small Cell Forum.
+        The aim is not merely to cover relevant standards and technologies as a purely academic exercise (although a significant part of the book is dedicated to these), but to augment these by explanations about why certain standards decisions have been made and how various NG-RAN architecture options can be deployed in real networks.
+        OAI provides software-based implementations of LTE base stations (eNBs), UEs and EPC compliant with LTE Release 8.6 (with an additional subset of features from LTE Release 10). OAI source code is written in C to guarantee real-time performance, and is distributed under the OAI Public License, a modified version of the Apache License v2.0 that allows patent-owning individuals and companies to contribute to the OAI source code while keeping their patent rights. Both the eNB and UE implementations are compatible with Intel x86 architectures running the Ubuntu Linux operating system. (An experimental version for the CentOS 7 is under development.) Several kernel- and BIOS-level modifications are required for these implementations to achieve real-time performance, including installing a low-latency kernel, and disabling power management and CPU frequency scaling functionalities.
