@@ -13,14 +13,14 @@ ran:
       desc: |
         OAI provides software-based implementations of LTE base stations (eNBs), UEs and EPC compliant with LTE Release 8.6 (with an additional subset of features from LTE Release 10). OAI source code is written in C to guarantee real-time performance, and is distributed under the OAI Public License, a modified version of the Apache License v2.0 that allows patent-owning individuals and companies to contribute to the OAI source code while keeping their patent rights. Both the eNB and UE implementations are compatible with Intel x86 architectures running the Ubuntu Linux operating system. (An experimental version for the CentOS 7 is under development.) Several kernel- and BIOS-level modifications are required for these implementations to achieve real-time performance, including installing a low-latency kernel, and disabling power management and CPU frequency scaling functionalities.
 
-    - title: srsLTE
+    - title: srsRAN
       contributors: SRS
       license: GNU AGPLv3
       status: Active
       community: Community support available
-      url: https://www.srslte.com/
+      url: https://www.srsran.com
       desc: |
-        srsLTE provides software implementations of LTE eNB, UE, and EPC compliant with LTE Release 10 (with some features from higher versions, e.g., NR Release 15). The software suite is written in the C and C++ programming languages and it is distributed under the GNU AGPLv3 license. srsLTE is compatible with the Ubuntu and Fedora Linux distributions. It does not require any kernel- or BIOS-level modifications to achieve real-time performance though disabling CPU frequency scaling is recommended.
+        srsRAN provides a suite of software comprising srsUE (4G LTE, 5G NSA), srsENB (4G LTE, 5G NSA), and srsEPC (4G EPC /MME,HSS,SPGW). 5G SA functionality (srsUE, srsGNB) is coming in 2022. It is compliant with LTE Release 10, with some features from higher versions, e.g., NR Release 15. The software suite is written in the C and C++ programming languages and it is distributed under the GNU AGPLv3 license. srsRAN is compatible with the Ubuntu and Fedora Linux distributions. It does not require any kernel- or BIOS-level modifications to achieve real-time performance though disabling CPU frequency scaling is recommended.
 
     - title: Radisys O-RAN gNB DU
       contributors: Radisys
@@ -29,7 +29,7 @@ ran:
       community: Community support unavailable
       url: https://gerrit.o-ran-sc.org/r/admin/repos/o-du/l2
       desc: |
-        Radisys is a 4G/5G vendor that contributes to a number of open source software consortia, including O-RAN and several Open Networking Foundation (ONF) initiatives.As part of O-RAN, Radisys provides an open source implementation of the 3GPP NR stack for the gNB DU. To date, does not represent a complete solution that can be deployed to run real-world experiments (as with OAI and srsLTE), as it lacks integration with open source CU and RU implementations. However, this represents a key first step toward the availability of an open source 5G gNB based on the CU/DU split principle. he currently available open source code provides a complete implementation of the MAC and RLC layers. The Radisys release also provides a layer that manages the operations of the DU and interfaces it with the CU, the RU and external controllers, when available. The codebase is aligned with Release 15 of the 3GPP NR specifications. The NR MAC uses the Functional  Application  Platform  Interface  (FAPI)  to interact with a scheduler, adapted from an LTE implementation. The RLC layer supports TM, UM, AM modes.
+        Radisys is a 4G/5G vendor that contributes to a number of open source software consortia, including O-RAN and several Open Networking Foundation (ONF) initiatives.As part of O-RAN, Radisys provides an open source implementation of the 3GPP NR stack for the gNB DU. To date, does not represent a complete solution that can be deployed to run real-world experiments (as with OAI and srsRAN), as it lacks integration with open source CU and RU implementations. However, this represents a key first step toward the availability of an open source 5G gNB based on the CU/DU split principle. he currently available open source code provides a complete implementation of the MAC and RLC layers. The Radisys release also provides a layer that manages the operations of the DU and interfaces it with the CU, the RU and external controllers, when available. The codebase is aligned with Release 15 of the 3GPP NR specifications. The NR MAC uses the Functional  Application  Platform  Interface  (FAPI)  to interact with a scheduler, adapted from an LTE implementation. The RLC layer supports TM, UM, AM modes.
 
 core:
   name: Core Network
@@ -55,9 +55,9 @@ core:
           license: GNU AGPLv3
           status: Active
           community: Community support available
-          url: https://www.srslte.com/
+          url: https://www.srsran.com/
           desc: |
-            The EPC implementation included in the srsLTE software  suite,  namely,  srsEPC,  is  written  in  C++. It is compatible with  the  Ubuntu  and  Fedora  Linux  operating  systems.  The HSS  supports  the  configuration  of  UE-related  parameters  in the  form  of  a  simple  textual  csv  file.  UE  authentication  is supported  by  XOR  and  Milenage  authentication  algorithms. srsEPC  enables  per-user  QoS  Class  Identifier  (QCI)  and  dynamic or static IP configurations.
+            The EPC implementation included in the srsRAN software  suite,  namely,  srsEPC,  is  written  in  C++. It is compatible with  the  Ubuntu  and  Fedora  Linux  operating  systems.  The HSS  supports  the  configuration  of  UE-related  parameters  in the  form  of  a  simple  textual  csv  file.  UE  authentication  is supported  by  XOR  and  Milenage  authentication  algorithms. srsEPC  enables  per-user  QoS  Class  Identifier  (QCI)  and  dynamic or static IP configurations.
 
         - title: OMEC
           contributors: ONF, Intel, Deutsche Telekom, Sprint, AT&T
@@ -197,7 +197,7 @@ ran-frameworks:
             5G-EmPOWER is an operating system for heterogeneous RAN architectures. It consists of an open
             source and reprogrammable software platform abstracting the physical RAN infrastructure and providing
             high-level APIs to control RAN functionalities.
-            5G-EmPOWER currently supports several mobile Radio Access Technologies (RATs) such as LTE via srsLTE,
+            5G-EmPOWER currently supports several mobile Radio Access Technologies (RATs) such as LTE via srsRAN,
             Wi-Fi, and LoRa. The 5G NR is not supported yet. Integration of diverse RATs is obtained through
             agents embedding specialized wrappers, one for each RAT. While the general architecture of the
             agent is RAT-independent, the wrapper is RAT-specific. For instance, new RATs (e.g., 5G NR) can
@@ -262,7 +262,7 @@ ran-frameworks:
             the MEC platform. LightEdge also includes modules and libraries for real-time information exchange
             across applications and services, and to perform traffic steering to and from the cellular network.
             LightEdge supports multiple eNBs and is compatible with several open source projects such as
-            srsLTE, Open5GS, and srsEPC.
+            srsRAN, Open5GS, and srsEPC.
 
 
 
@@ -319,7 +319,7 @@ sdr:
       channel: 1
       frequency_range: [70 MHz, 6 GHz]
       bandwidth: 56 MHz
-      ran_software: srsLTE
+      ran_software: srsRAN
       target: DAS node
       url: https://kb.ettus.com/B200/B210/B200mini/B205mini
       desc: |
@@ -329,7 +329,7 @@ sdr:
       channel: 2
       frequency_range: [70 MHz, 6 GHz]
       bandwidth: 56 MHz
-      ran_software: OAI, srsLTE
+      ran_software: OAI, srsRAN
       target: DAS node, small cell
       url: https://kb.ettus.com/B200/B210/B200mini/B205mini
       desc: |
@@ -349,7 +349,7 @@ sdr:
       channel: Up to 2
       frequency_range: [DC, 6 GHz]
       bandwidth: 160 MHz
-      ran_software: OAI, srsLTE
+      ran_software: OAI, srsRAN
       target: DAS node, small cell, cell tower
       url: https://kb.ettus.com/X300/X310
       desc: |
@@ -359,7 +359,7 @@ sdr:
       channel: 1
       frequency_range: [300 MHz, 3.8 GHz]
       bandwidth: 28 MHz
-      ran_software: OAI, srsLTE
+      ran_software: OAI, srsRAN
       target: DAS node, small cell
       url: https://www.nuand.com/
       desc: |
@@ -369,7 +369,7 @@ sdr:
       channel: 2
       frequency_range: [47 MHz, 6 GHz]
       bandwidth: 56 MHz
-      ran_software: OAI, srsLTE
+      ran_software: OAI, srsRAN
       target: DAS node, small cell
       url: https://www.nuand.com/
       desc: |
@@ -379,7 +379,7 @@ sdr:
       channel: 4 TX, 6 RX
       frequency_range: [100 kHz, 3.8 GHz]
       bandwidth: 61.44 MHz
-      ran_software: OAI, srsLTE
+      ran_software: OAI, srsRAN
       target: DAS node, small cell
       url: https://limemicro.com/products/boards/limesdr/
       desc: |
@@ -389,7 +389,7 @@ sdr:
       channel: 2
       frequency_range: [50 MHz, 3.8 GHz]
       bandwidth: 56 MHz
-      ran_software: OAI, srsLTE
+      ran_software: OAI, srsRAN
       target: DAS node, small cell
       url: https://skylarkwireless.com/
       desc: |
