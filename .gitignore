@@ -5,3 +5,4 @@ _site
 .rbenv-gemsets
 .DS_Store
 *.swp
+Gemfile.lock
