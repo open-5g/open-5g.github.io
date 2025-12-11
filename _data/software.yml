@@ -423,7 +423,7 @@ testbeds:
       5g_software: RAN & Core
       framework: N/A
       scale: Large-scale office
-      url: https://ece.northeastern.edu/wineslab/arena.php
+      url: https://openrangym.com/experimental-platforms/arena
       desc: |
 
     - title: Colosseum
